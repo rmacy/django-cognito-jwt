@@ -47,7 +47,7 @@ class TokenValidator:
             jwt_data = jwt.decode(
                 token,
                 public_key,
-                audience=self.audience,
+                aud=self.audience,
                 issuer=self.pool_url,
                 algorithms=['RS256'],
             )
